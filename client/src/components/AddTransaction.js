@@ -14,7 +14,6 @@ const AddTransaction = () => {
       return;
     }
     const newTransaction = {
-      id: Math.floor(Math.random() * 10000),
       text,
       amount: +amount,
     };
@@ -27,7 +26,7 @@ const AddTransaction = () => {
   return (
     <>
       <h3>新しいトランザクションを追加する</h3>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} autoComplete="off">
         <div className="form-control">
           <label htmlFor="text">Text</label>
           <input
