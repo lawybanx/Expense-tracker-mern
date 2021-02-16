@@ -31,6 +31,7 @@ const AddTransaction = () => {
         <div className="form-control">
           <label htmlFor="text">Text</label>
           <input
+            name="text"
             type="text"
             placeholder="Enter text..."
             value={text}
@@ -43,6 +44,7 @@ const AddTransaction = () => {
             (negative - expense, positive - income)
           </label>
           <input
+            name="text"
             type="number"
             placeholder="Enter amount..."
             value={amount}
