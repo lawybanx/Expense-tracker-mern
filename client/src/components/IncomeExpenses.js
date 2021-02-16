@@ -19,7 +19,7 @@ const IncomeExpenses = () => {
   return (
     <div className="inc-exp-container">
       <div>
-        <h4>インコム</h4>
+        <h4>インカム</h4>
         <p className="money plus">{income}</p>
       </div>
       <div>
