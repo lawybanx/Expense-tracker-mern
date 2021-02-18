@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/transactions', require('./routes/api/transactions'));
 
+// Static Build Folder
 if (process.env.NODE_ENV === 'production') {
-  // Static Folder
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) => {
