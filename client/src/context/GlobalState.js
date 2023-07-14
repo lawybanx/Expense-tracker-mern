@@ -19,7 +19,9 @@ export const GlobalProvider = ({ children }) => {
   // Actions
   const getTransactions = async () => {
     try {
-      const res = await axios.get('/api/transactions');
+      const res = await axios.get(
+        'https://expense-tracker-mern-5knl.onrender.com/api/transactions'
+      );
 
       dispatch({
         type: 'GET_TRANSACTIONS',
@@ -33,9 +35,11 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
-  const deleteTransaction = async (id) => {
+  const deleteTransaction = async id => {
     try {
-      await axios.delete(`/api/transactions/${id}`);
+      await axios.delete(
+        `https://expense-tracker-mern-5knl.onrender.com/api/transactions/${id}`
+      );
 
       dispatch({
         type: 'DELETE_TRANSACTION',
@@ -49,7 +53,7 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
-  const addTransaction = async (transc) => {
+  const addTransaction = async transc => {
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -57,7 +61,11 @@ export const GlobalProvider = ({ children }) => {
     };
 
     try {
-      const res = await axios.post('/api/transactions', transc, config);
+      const res = await axios.post(
+        'https://expense-tracker-mern-5knl.onrender.com/api/transactions',
+        transc,
+        config
+      );
 
       dispatch({
         type: 'ADD_TRANSACTION',
